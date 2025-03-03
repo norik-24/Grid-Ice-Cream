@@ -1,0 +1,62 @@
+@import url(variable.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #DB1A5F;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 95px 1fr;
+    column-gap: 2%;
+    padding: 23px 1% 0px 1%;
+    grid-template-areas:
+        "logo logo menu menu menu menu menu menu opcion opcion"
+        "pre pre pre pre info info info info info info";
+}
+
+.div_logo {
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div_logo img {
+    width: 80%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.div_menu {
+    grid-area: menu;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div_menu ul {
+    display: flex;
+    gap: 33px;
+}
+
+.div_info {
+    grid-area: info;
+    background: orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.div_product {
+    padding-top: 81px;
+    grid-area: pre;
+    background: blueviolet;
+    width: 780px;
+    height: 805px;
+    position: relative;
+}
