@@ -13,13 +13,13 @@ body {
     grid-template-rows: 95px 1fr;
     column-gap: 2%;
     padding: 23px 1% 0px 1%;
-    grid-template-areas:
-        "logo logo menu menu menu menu menu menu opcion opcion"
-        "pre pre pre pre info info info info info info";
+    grid-template-areas:"logo logo menu menu menu menu menu menu opcion opcion"
+                        "pre pre pre pre info info info info info info";
 }
 
 .div_logo {
     grid-area: logo;
+    /*background: orange;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,6 +32,7 @@ body {
 }
 
 .div_menu {
+    /*background: violet;*/
     grid-area: menu;
     display: flex;
     justify-content: center;
@@ -43,20 +44,105 @@ body {
     gap: 33px;
 }
 
-.div_info {
-    grid-area: info;
-    background: orange;
+.div_menu ul li{
+    /*background:olive;*/
+    list-style: none;;
+}
+
+.div_menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 28px;
+}
+
+.div_option{
+    grid-area:opcion;
+    background: green;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
+    gap: 32px;
 }
 
 .div_product {
     padding-top: 81px;
     grid-area: pre;
-    background: blueviolet;
     width: 780px;
-    height: 805px;
+    height: 85svh;
     position: relative;
+}
+
+
+.div_product > img{
+    position: absolute;
+    right: 0;
+}
+
+.div_ice-cream img:nth-child(1),
+.div_ice-cream img:nth-child(2),
+.div_ice-cream img:nth-child(3){
+    position: absolute;
+    height: 663px;
+    object-fit: contain;
+    bottom: 0;
+}
+
+.div_ice-cream img:nth-child(3){
+    transform: rotate(32.69deg);
+    width: 447px;
+    height: 753px;
+    z-index: 5;
+    left: -140px;
+}
+
+.div_ice-cream img:nth-child(2){
+    transform: rotate(57.18deg);
+    z-index: 10;
+    width:447px;
+    height: 832px;
+    left: 0px;
+    left:40px;
+    bottom: -80px;
+}
+
+.div_ice-cream img:nth-child(1){
+    transform: rotate(85.74deg);
+    z-index: 5;
+    width: 514px;
+    height: 746px;
+    left: 45px;
+    bottom: -230px;
+}
+
+.div_info {
+    grid-area: info;
+    /*background: blue;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.div_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div_content h1,
+.div_content span,
+.div_content p{
+    color:#fff;
+}
+
+.div_content h1{
+    font-size: 69px;
+}
+
+.div_content span{
+    font-size: 32px;
+}
+
+.div_content p{
+    font-size: 24px;
 }
