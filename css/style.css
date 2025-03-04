@@ -18,11 +18,14 @@ body {
 }
 
 .div_logo {
+    width:158;
+    height:95;
     grid-area: logo;
     /*background: orange;*/
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left:40px;
 }
 
 .div_logo img {
@@ -57,8 +60,8 @@ body {
 
 .div_option{
     grid-area:opcion;
-    background: green;
-    /*display: flex;*/
+    /*background: green;*/
+    display: flex;
     justify-content: center;
     align-items: center;
     gap: 32px;
@@ -150,8 +153,18 @@ body {
 .div_info a{
     align-self: flex-end;
     margin-top: 72px;
-    margin-right: 113px;
+    margin-right: 450px;
 
+}
+
+.boton{
+    display: grid;
+    place-items: center;
+    border-radius: 5px;
+    background-color:#BDD37F;
+    font-weight: bold;
+    width: 177px;
+    height: 68px;
 }
 
 @media(max-width:430px){
@@ -165,6 +178,9 @@ body {
                             "opcion opcion opcion"
                             "pre pre pre"
                             "info info info";
+    }
+    .div_logo{
+        margin-left:30%;
     }
     .div_menu{
         grid-area: menu;
@@ -214,7 +230,74 @@ body {
         margin:30px auto;
         z-index: -10;
     }
+    .div_ice-cream img:nth-child(3){
+        transform: rotate(19deg);
+        width: 447px;
+        height: 500px;
+        z-index: 5;
+        left: -180px;
+    }
+
+    .div_ice-cream img:nth-child(2){
+        transform: rotate(19deg);
+        width: 447px;
+        height: 500px;
+        z-index: 10;
+        left: -15px;
+        bottom:0;
+    }
+
+    .div_ice-cream img:nth-child(1){
+        transform: rotate(19deg);
+        width: 514px;
+        height: 500px;
+        z-index: 5;
+        left: 55px;
+        bottom:0px;
+    }
+
+    .div_info {
+        grid-area: info;
+        /*background: blue;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;*/
+    }
     
+    .div_content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .div_content h1,
+    .div_content span,
+    .div_content p{
+        color:#fff;
+    }
+    
+    .div_content h1{
+        font-size: 40px;
+    }
+    
+    .div_content span{
+        font-size: 28px;
+    }
+    
+    .div_content p{
+        font-size: 20px;
+        width: 380px;margin-left:10px;
+    }
+    
+    .div_info a{
+        align-self: flex-end;
+        margin-top: 72px;
+        margin-right: 10px;
+    
+    }
+    
+
 
 
 
